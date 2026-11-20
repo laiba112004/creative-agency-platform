@@ -1,206 +1,191 @@
-# 🎬 CreativeStudio — Full-Stack Creative Agency & Video Production Platform
+<div align="center">
 
-A modern, production-grade web platform designed for digital media agencies and high-growth YouTube creators. It streamlines the entire creative client lifecycle: from dynamic quote estimation and multi-rail checkout to interactive frame-accurate video reviews, high-speed 50GB file ingestion, and studio CRM analytics.
+# CreativeStudio 🎬
+### Full-Stack Video Production & Creative Agency Platform
 
----
-
-## 💡 About The Project
-
-Traditional creative agencies struggle with disjointed workflows: client intake happens across WhatsApp messages, large video files break normal forms, revisions get lost in messy email threads, and payment methods often don't support local domestic banking alongside international cards.
-
-**CreativeStudio** solves this by providing a unified client workspace and agency dashboard built on the MERN stack (MongoDB, Express, React, Node.js). Clients can configure custom packages, upload raw camera footage through a resumable chunked uploader, review video cuts with second-by-second timecode comments, and download official PDF tax invoices upon completion.
+A modern web application built for digital creative agencies, video editors, and high-growth content creators.  
+Handles the entire project lifecycle — from instant quote estimation and multi-rail checkout to frame-accurate video reviews, 50GB footage transfers, and agency pipeline management.
 
 ---
 
-## Core Features
+**Built with the MERN Stack**  
+React 19 &bull; Vite &bull; Node.js &bull; Express &bull; MongoDB &bull; Tailwind CSS
 
-### 🎥 Hero & 4K Showreel Lightbox
-- High-impact visual introduction with live social proof counters (500M+ views generated, 99.4% on-time delivery rate).
-- Instant-launch 4K video lightbox allowing prospective clients to preview agency production quality without leaving the landing page.
-
-### Interactive Before / After Comparison Slider
-- Draggable comparison viewport allowing creators to compare raw camera log footage against final Hollywood-grade Rec.709 color grading and high-CTR thumbnail compositions.
-- Fully touch-enabled for mobile phones and tablets.
-
-### Dynamic Instant Quote Calculator
-- Real-time pricing engine based on target video length (1 to 45 minutes) and quantity.
-- Automated monthly retainer bundle discounts (up to 20% off for 4+ videos).
-- Instant **USD ($) / PKR (₨)** dual-currency switcher calculated at commercial bank exchange rates.
-- Direct booking synchronization with the MongoDB database.
-
-### 3-Step Checkout & Multi-Rail Payments
-- Tiered packages: **Starter ($149)**, **Pro ($299)**, and **Elite ($599)**.
-- Modular add-on configurator: 48-hour rush delivery, 3x A/B test thumbnails, shorts/reels repurposing, and SEO title packs.
-- Promo coupon engine (e.g. `LAUNCH20` for an instant 20% discount).
-- Multi-rail payment support:
-  - **International**: Credit / Debit card processing.
-  - **Pakistan Domestic**: Direct IBAN bank transfer (Meezan Bank), Raast Instant ID, and JazzCash mobile wallet.
-
-### 📊 Client Portal & 5-Stage Milestone Tracker
-- Secure workspace with Google Workspace SSO and email authentication.
-- Tenant isolation: Clients only see their own active projects and pipeline status.
-- Real-time 5-stage production milestone tracking:
-  `Received` ➔ `Assets Verified` ➔ `In Editing` ➔ `Ready for Review` ➔ `Approved & Delivered`.
-
-### 🎬 Frame-Accurate Video Review Studio
-- In-browser custom video review player with timeline scrubbing.
-- Pinned timecode feedback: clients can leave timestamped notes (e.g., `00:24 - Make transition sharper`).
-- Two-way collaborative thread between the client reviewer and the senior video editor.
-- One-click master approval button.
-
-###  50GB Media Vault & Resumable Chunk Uploader
-- Native OS File Explorer picker allowing clients to select real 4K video footage and project ZIPs.
-- Chunked transfer simulator showing live byte progress and cloud upload speeds (~42.8 MB/s).
-- Verified asset repository with direct download triggers.
-
-###  Agency CRM & Executive Analytics
-- Real-time gross pipeline revenue counter and SLA delivery compliance rate (99.4%).
-- Interactive CRM leads pipeline table with stage advancement (`New Inquiry` ➔ `In Production` ➔ `Won & Retained`).
-- Senior editor and art director weekly workload capacity bars.
-
-###  CreativeStudio AI Assistant
-- 24/7 AI Producer chatbot trained on agency turnaround times, packages, and recommendations.
-- Markdown formatting with gold highlights and quick-tap suggestion chips.
-
-###  Auto-Generated PDF Tax Invoices
-- One-click invoice generation (`#INV-2026-XXXX`) with 0% software export tax and dual-currency breakdown.
-- Automatically downloads an authentic `.pdf` invoice directly to the client's laptop Downloads folder via `jsPDF`.
-- Includes an official **Commercial Copyright Assignment Clause** unconditionally transferring all intellectual property rights to the client.
-
-###  1:1 Strategy Call Booking
-- Integrated consultation calendar with weekday selection, Pakistan Standard Time (PKT) slots, and automated Google Meet link provisioning.
-
-### 📱 Mobile-First Responsive Design
-- Fully optimized across mobile, tablet, laptop, and ultrawide monitors.
-- Sticky mobile bottom bar with 44px+ tap targets for Services, Portal, WhatsApp, and Order.
-- Custom dark-gold Toast notification architecture replacing all native browser alerts.
+</div>
 
 ---
 
-## Tech Stack
+## 📌 Project Overview
+
+When creative agencies work with creators and brands, communication usually gets scattered across WhatsApp messages, Google Drive links, endless revision emails, and manual bank transfers. 
+
+**CreativeStudio** was built to bring all of that into one unified, clean workspace:
+
+- **For Creators / Clients**: Choose a package or build a custom quote, attach raw footage via a resumable uploader, leave second-by-second revision notes directly on the video player, and download official PDF invoices.
+- **For Agency Owners / Editors**: Track orders through a live 5-stage milestone pipeline, monitor gross revenue and turnaround SLAs, manage incoming leads, and balance team editing workloads.
+
+---
+
+## ⚡ Key Highlights & Features
+
+### 🎥 Client Experience & Conversion
+- **Interactive 4K Showreel Lightbox**: Embedded showcase modal with lazy-loaded video streaming and real performance metrics (500M+ views, 99.4% on-time delivery).
+- **Before & After Visual Comparison**: Touch-draggable comparison slider showing raw camera log footage vs. final color-graded output and high-CTR thumbnail designs.
+- **Instant Quote Calculator**: Real-time price estimator based on video length and quantity, featuring automatic monthly retainer discounts (up to 20% off) and an instant **USD ($) / PKR (₨)** currency switcher.
+- **3-Step Checkout Drawer**: Modular package selection (Starter, Pro, Elite) with customizable add-ons (rush delivery, shorts cut-downs, A/B thumbnails), promo code engine (`LAUNCH20`), and multiple payment methods (Credit/Debit Card, Meezan Bank IBAN, Raast, JazzCash).
+- **1:1 Strategy Call Booking**: Interactive booking calendar with weekday selection, PKT time slots, and automatic Google Meet link generation.
+- **Creator Case Studies & Insights**: Real-world breakdowns of high-retention video edits and thumbnail tear-downs, paired with a newsletter subscription magnet.
+
+### 🛠️ Client Portal & Workspace
+- **Client Authentication**: Google Workspace SSO and email sign-in with tenant isolation (clients only see their own active projects).
+- **5-Stage Milestone Tracker**: Live visual status progression (`Received` ➔ `Assets Verified` ➔ `In Editing` ➔ `Ready for Review` ➔ `Approved & Delivered`).
+- **Frame-Accurate Video Review Studio**: In-browser video review player with timeline scrubbing and timecoded comments (e.g., `00:24 - Make sound effect punchier`) for clear editor-client collaboration.
+- **50GB Media Vault**: Native OS file picker integration simulating chunked resumable uploads (~42.8 MB/s transfer speed) with a verified file repository and direct download actions.
+- **Instant PDF Invoice Generator**: One-click branded tax invoice generator (`#INV-2026-XXXX`) built with `jsPDF`. Automatically downloads a clean A4 PDF receipt to the client's laptop, complete with itemized billing, 0% export tax, and an official **Commercial Copyright Transfer Clause**.
+
+### 📊 Agency Management & AI
+- **Agency CRM & Analytics**: Real-time gross pipeline revenue counter, deal pipeline status transitions, SLA tracker, and senior editor workload capacity bars.
+- **AI Creative Producer**: Floating chatbot trained on agency turnaround times, packages, and pricing to assist prospective clients 24/7.
+- **Mobile-First Experience**: Fully responsive with a persistent sticky bottom action bar (Services, Portal, WhatsApp, Order) and tap-friendly targets.
+- **Accessible Toast Notifications**: Custom animated dark/gold toast system replacing intrusive native browser alerts.
+
+---
+
+## 💻 Tech Stack
 
 ### Frontend
 - **Framework**: React 19 + Vite
-- **Styling**: Tailwind CSS v3 (Custom Dark & Gold Luxury Palette)
+- **Styling**: Tailwind CSS v3 (custom dark navy `#0B1220` & royal gold `#C9A24B` palette)
 - **Icons**: Lucide React
+- **PDF Generation**: jsPDF
 - **HTTP Client**: Axios
-- **Document Generation**: jsPDF
-- **Typography**: Sora (Display) & Plus Jakarta Sans (Body)
+- **Fonts**: Sora (Headings) & Plus Jakarta Sans (Body)
 
-### Backend & Database
+### Backend
 - **Runtime**: Node.js & Express.js
-- **Database**: MongoDB & Mongoose ODM
-- **Environment**: Dotenv & CORS
-- **Architecture**: RESTful API with MVC pattern
+- **Database**: MongoDB with Mongoose ODM
+- **Architecture**: MVC REST API pattern
+- **Security & Config**: Dotenv, CORS, express.json
 
 ---
 
-## 📁 Project Structure
+## 📂 Project Directory Structure
 
-```
+```text
 creative-agency-platform/
-├── client/                     # Frontend React + Vite application
+├── client/                     # Frontend Application
+│   ├── public/                 # Static assets & favicons
 │   ├── src/
 │   │   ├── components/         # Modular UI components
-│   │   │   ├── Navbar.jsx
-│   │   │   ├── Hero.jsx
-│   │   │   ├── ServicesSection.jsx
-│   │   │   ├── ThumbnailSlider.jsx
-│   │   │   ├── PortfolioSection.jsx
-│   │   │   ├── ProcessSection.jsx
-│   │   │   ├── QuoteCalculator.jsx
-│   │   │   ├── PricingSection.jsx
-│   │   │   ├── TestimonialsSection.jsx
-│   │   │   ├── BlogSection.jsx
-│   │   │   ├── FaqSection.jsx
-│   │   │   ├── OrdersDashboard.jsx
-│   │   │   ├── InvoiceModal.jsx
-│   │   │   ├── BookingModal.jsx
-│   │   │   ├── LoginModal.jsx
-│   │   │   ├── LegalModal.jsx
-│   │   │   ├── CookieBanner.jsx
-│   │   │   ├── MobileStickyBar.jsx
-│   │   │   └── AiAssistant.jsx
-│   │   ├── context/            # Auth & Toast global providers
-│   │   ├── utils/              # PDF generator & helpers
-│   │   ├── App.jsx             # Root layout & modal coordinator
-│   │   └── index.css           # Tailwind layers & luxury glass tokens
+│   │   │   ├── Navbar.jsx          # Header with navigation & auth badge
+│   │   │   ├── Hero.jsx            # Headline & 4K showreel lightbox
+│   │   │   ├── ServicesSection.jsx # Agency services grid
+│   │   │   ├── ThumbnailSlider.jsx # Touch-enabled before/after comparison
+│   │   │   ├── PortfolioSection.jsx# Filterable portfolio & preview modal
+│   │   │   ├── ProcessSection.jsx  # 4-step agency workflow
+│   │   │   ├── QuoteCalculator.jsx # Dynamic price & turnaround estimator
+│   │   │   ├── PricingSection.jsx  # Tiered packages & 3-step checkout
+│   │   │   ├── OrdersDashboard.jsx # Client portal, review player & vault
+│   │   │   ├── InvoiceModal.jsx    # Tax invoice modal & PDF export
+│   │   │   ├── BookingModal.jsx    # 1:1 Strategy call scheduler
+│   │   │   ├── BlogSection.jsx     # Case studies & weekly newsletter
+│   │   │   ├── AiAssistant.jsx     # AI Producer chatbot
+│   │   │   ├── MobileStickyBar.jsx # Sticky mobile bottom navigation
+│   │   │   └── ...
+│   │   ├── context/            # Global Auth & Toast state providers
+│   │   ├── utils/              # Client-side PDF generation utility
+│   │   ├── App.jsx             # Main application layout & coordinators
+│   │   └── index.css           # Tailwind custom styles & glass tokens
 │   └── package.json
 │
-├── server/                     # Backend Node + Express REST API
-│   ├── config/                 # MongoDB database connection
-│   ├── controllers/            # Order & pipeline controllers
-│   ├── models/                 # Mongoose schemas (Order, Client)
-│   ├── routes/                 # Express API routes
-│   ├── server.js               # Entry point
-│   ├── .env                    # Environment variables
+├── server/                     # Backend REST API
+│   ├── config/db.js            # MongoDB connection handler
+│   ├── controllers/            # Request handlers (orders, status, notes)
+│   ├── models/                 # Mongoose schemas (Order, User)
+│   ├── routes/                 # Express API route endpoints
+│   ├── server.js               # Application entry point
+│   ├── .env.example            # Sample environment configuration
 │   └── package.json
 │
-└── README.md
+├── .gitignore                  # Git ignore rules (protects .env & node_modules)
+└── README.md                   # Project documentation
 ```
 
 ---
 
-## 🚀 Getting Started
+## 🚀 Local Development Setup
 
 ### Prerequisites
-- [Node.js](https://nodejs.org/) (v18.0.0 or higher)
-- [MongoDB](https://www.mongodb.com/) (running locally on `mongodb://127.0.0.1:27017` or MongoDB Atlas URI)
+- **Node.js** (v18.0.0 or higher recommended)
+- **npm** (v9.0.0 or higher)
+- **MongoDB** (running locally or a free [MongoDB Atlas](https://www.mongodb.com/cloud/atlas) connection URI)
 
-### 1. Clone the Repository
+---
+
+### Step 1: Clone the Repository
 ```bash
 git clone https://github.com/your-username/creative-agency-platform.git
 cd creative-agency-platform
 ```
 
-### 2. Set Up the Backend Server
+---
+
+### Step 2: Configure & Start Backend
+Open a terminal in the root directory:
+
 ```bash
 cd server
 npm install
 ```
 
-Ensure your `.env` file in the `server` directory contains:
+Create a `.env` file inside the `server/` folder (or copy from `.env.example`):
 ```env
 PORT=5000
 MONGO_URI=mongodb://127.0.0.1:27017/creative-agency
 CLIENT_URL=http://localhost:5173
 ```
 
-Start the API server:
+Start the server:
 ```bash
 npm run dev
 ```
 > The API will be running at `http://localhost:5000`.
 
-### 3. Set Up the Frontend Client
-In a new terminal window:
+---
+
+### Step 3: Configure & Start Frontend
+Open a second terminal window:
+
 ```bash
 cd client
 npm install
 npm run dev
 ```
-> The application will open at `http://localhost:5173`.
+> The web application will launch at `http://localhost:5173`.
 
 ---
 
-## 📡 REST API Endpoints
+## 📡 Core API Reference
 
 | Method | Endpoint | Description |
 |---|---|---|
-| `GET` | `/api/orders` | Fetch active production orders |
+| `GET` | `/api/orders` | Retrieve orders for the client pipeline |
 | `POST` | `/api/orders` | Create a new order with package brief & add-ons |
 | `GET` | `/api/orders/:id` | Fetch details for a specific order |
-| `PATCH` | `/api/orders/:id/status` | Update milestone progress (e.g. In Editing ➔ Ready for Review) |
+| `PATCH` | `/api/orders/:id/status` | Advance or update the production stage milestone |
 | `POST` | `/api/orders/:id/comments` | Add a frame-accurate timecode revision note |
-| `GET` | `/` | API health check route |
+| `GET` | `/` | API server health check |
 
 ---
 
-##  Engineering Decisions
+## 💡 Key Engineering Decisions
 
-1. **Zero Browser Alerts**: Replaced all intrusive native `window.alert()` dialogs with an animated, accessible dark/gold Toast notification system that doesn't block the JavaScript execution thread.
-2. **Resumable Large File Architecture**: Handled large 50GB 4K camera footage through client-side chunked simulation hooks to demonstrate enterprise cloud storage integration (AWS S3 / R2 presigned upload pipeline).
-3. **Direct Vector PDF Rendering**: Utilized `jsPDF` for client-side invoice compilation, generating authentic A4 tax invoices with exact mathematical positioning and instant browser download triggers.
-4. **Mobile Navigation Hierarchy**: Added a dedicated persistent bottom action bar on mobile viewports for quick access to Services, WhatsApp, Client Portal, and Checkout.
+1. **Custom Toast Architecture Over Native Alerts**: Native browser `alert()` dialogs pause JavaScript execution and feel clunky. We built a React Context toast notification system with dark glass styling and gold accents to handle asynchronous success, error, and info states smoothly.
+2. **Resumable Large File Upload Strategy**: Uploading 10GB–50GB 4K video files directly through a standard Node.js server causes bottlenecks. The platform features a client-side chunked simulation hook designed to integrate directly with S3/R2 presigned multipart upload architectures.
+3. **Client-Side Vector PDF Rendering**: Instead of rendering invoices on the backend and streaming large files, `jsPDF` calculates exact vector typography and line items directly in the browser, triggering an instant native download.
+4. **Domestic & International Dual-Currency Rails**: Recognizing that agency clients operate both globally (USD) and locally in Pakistan (PKR), the checkout system and quote calculator support dual currency toggles with Pakistan domestic payment details (Meezan Bank, Raast, JazzCash).
 
+---
 
+## 📄 License
+Built for **CreativeStudio Agency**. Distributed for educational and commercial demonstration purposes.

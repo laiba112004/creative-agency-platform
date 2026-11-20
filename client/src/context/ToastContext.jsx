@@ -63,11 +63,9 @@ export const ToastProvider = ({ children }) => {
     info: (msg, title) => showToast(msg, 'info', title)
   };
 
-  // Safe global override of window.alert to guarantee NO native alert popups appear anywhere
   useEffect(() => {
     const originalAlert = window.alert;
     window.alert = (alertMsg) => {
-      // Determine if error or info based on message text
       const str = String(alertMsg || '');
       const isErr = str.toLowerCase().includes('error') || str.toLowerCase().includes('fail');
       showToast(str, isErr ? 'error' : 'info');
@@ -90,28 +88,26 @@ export const ToastProvider = ({ children }) => {
         {toasts.map((t) => (
           <div
             key={t.id}
-            className={`pointer-events-auto w-full rounded-2xl p-4 shadow-2xl backdrop-blur-xl border transition-all duration-300 transform translate-y-0 opacity-100 flex flex-col overflow-hidden animate-in fade-in slide-in-from-top-4 ${
-              t.type === 'success'
+            className={`pointer-events-auto w-full rounded-2xl p-4 shadow-2xl backdrop-blur-xl border transition-all duration-300 transform translate-y-0 opacity-100 flex flex-col overflow-hidden animate-in fade-in slide-in-from-top-4 ${t.type === 'success'
                 ? 'bg-[#12221B]/95 border-emerald-500/40 text-emerald-50 shadow-emerald-950/50'
                 : t.type === 'error'
-                ? 'bg-[#251319]/95 border-rose-500/40 text-rose-50 shadow-rose-950/50'
-                : t.type === 'warning'
-                ? 'bg-[#241C10]/95 border-[#C9A24B]/50 text-amber-50 shadow-amber-950/50'
-                : 'bg-[#131C2D]/95 border-[#C9A24B]/40 text-white shadow-black/80'
-            }`}
+                  ? 'bg-[#251319]/95 border-rose-500/40 text-rose-50 shadow-rose-950/50'
+                  : t.type === 'warning'
+                    ? 'bg-[#241C10]/95 border-[#C9A24B]/50 text-amber-50 shadow-amber-950/50'
+                    : 'bg-[#131C2D]/95 border-[#C9A24B]/40 text-white shadow-black/80'
+              }`}
           >
             <div className="flex items-start gap-3.5">
               {/* Type Icon Badge */}
               <div
-                className={`w-9 h-9 rounded-xl flex items-center justify-center shrink-0 border ${
-                  t.type === 'success'
+                className={`w-9 h-9 rounded-xl flex items-center justify-center shrink-0 border ${t.type === 'success'
                     ? 'bg-emerald-500/20 border-emerald-500/40 text-emerald-400'
                     : t.type === 'error'
-                    ? 'bg-rose-500/20 border-rose-500/40 text-rose-400'
-                    : t.type === 'warning'
-                    ? 'bg-[#C9A24B]/20 border-[#C9A24B]/40 text-[#C9A24B]'
-                    : 'bg-[#C9A24B]/15 border-[#C9A24B]/30 text-[#C9A24B]'
-                }`}
+                      ? 'bg-rose-500/20 border-rose-500/40 text-rose-400'
+                      : t.type === 'warning'
+                        ? 'bg-[#C9A24B]/20 border-[#C9A24B]/40 text-[#C9A24B]'
+                        : 'bg-[#C9A24B]/15 border-[#C9A24B]/30 text-[#C9A24B]'
+                  }`}
               >
                 {t.type === 'success' && <CheckCircle2 className="w-5 h-5 stroke-[2.2]" />}
                 {t.type === 'error' && <AlertCircle className="w-5 h-5 stroke-[2.2]" />}
@@ -143,13 +139,12 @@ export const ToastProvider = ({ children }) => {
             {t.duration > 0 && (
               <div className="w-full bg-white/10 h-0.5 mt-3 rounded-full overflow-hidden">
                 <div
-                  className={`h-full animate-[shrink_linear_forwards] ${
-                    t.type === 'success'
+                  className={`h-full animate-[shrink_linear_forwards] ${t.type === 'success'
                       ? 'bg-emerald-400'
                       : t.type === 'error'
-                      ? 'bg-rose-400'
-                      : 'bg-[#C9A24B]'
-                  }`}
+                        ? 'bg-rose-400'
+                        : 'bg-[#C9A24B]'
+                    }`}
                   style={{
                     animationDuration: `${t.duration}ms`,
                     animationName: 'toastProgress'

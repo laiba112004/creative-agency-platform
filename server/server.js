@@ -3,10 +3,8 @@ const cors = require('cors');
 const dotenv = require('dotenv');
 const connectDB = require('./config/db');
 
-// Environment variables load karein
 dotenv.config();
 
-// Database connect karein
 connectDB();
 
 const app = express();
