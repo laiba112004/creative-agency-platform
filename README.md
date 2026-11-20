@@ -1,6 +1,5 @@
-<div align="center">
 
-# CreativeStudio 🎬
+# CreativeStudio 
 ### Full-Stack Video Production & Creative Agency Platform
 
 A modern web application built for digital creative agencies, video editors, and high-growth content creators.  
@@ -187,5 +186,4 @@ npm run dev
 
 ---
 
-## 📄 License
-Built for **CreativeStudio Agency**. Distributed for educational and commercial demonstration purposes.
+
