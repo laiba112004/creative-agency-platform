@@ -149,10 +149,15 @@ export const downloadInvoicePdf = (order) => {
   doc.setTextColor(100, 116, 139);
   doc.text('Includes 4K master delivery, custom sound design, color grade, and revisions.', margin + 4, currentY + 11);
 
-  if (order.addons && order.addons.length > 0) {
-    const addonsStr = 'Add-ons: ' + order.addons.join('  •  ');
-    doc.setTextColor(180, 83, 9);
-    doc.text(addonsStr, margin + 4, currentY + 16);
+  if (order.addons) {
+    const addonsText = Array.isArray(order.addons)
+      ? order.addons.join('  •  ')
+      : String(order.addons).trim();
+    if (addonsText) {
+      const addonsStr = 'Add-ons: ' + (addonsText.length > 55 ? addonsText.slice(0, 55) + '...' : addonsText);
+      doc.setTextColor(180, 83, 9);
+      doc.text(addonsStr, margin + 4, currentY + 16);
+    }
   }
 
   // Tier column

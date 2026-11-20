@@ -57,9 +57,7 @@ const createOrder = async (req, res) => {
   }
 };
 
-// @desc    Get all orders (with optional status filtering)
-// @route   GET /api/orders
-// @access  Public / Admin
+
 const getOrders = async (req, res) => {
   try {
     const { status } = req.query;
@@ -77,9 +75,7 @@ const getOrders = async (req, res) => {
   }
 };
 
-// @desc    Get single order by ID
-// @route   GET /api/orders/:id
-// @access  Public / Admin
+
 const getOrderById = async (req, res) => {
   try {
     const order = await Order.findById(req.params.id);
@@ -93,9 +89,7 @@ const getOrderById = async (req, res) => {
   }
 };
 
-// @desc    Update order workflow status (Received -> Assets Verified -> In Editing -> Ready for Review -> Approved)
-// @route   PATCH /api/orders/:id/status
-// @access  Public / Admin
+
 const updateOrderStatus = async (req, res) => {
   try {
     const { status } = req.body;
@@ -125,9 +119,7 @@ const updateOrderStatus = async (req, res) => {
   }
 };
 
-// @desc    Add a timestamped review comment to an order deliverable
-// @route   POST /api/orders/:id/comments
-// @access  Public / Client
+
 const addReviewComment = async (req, res) => {
   try {
     const { timestamp, author, comment } = req.body;
@@ -154,9 +146,7 @@ const addReviewComment = async (req, res) => {
   }
 };
 
-// @desc    Delete order
-// @route   DELETE /api/orders/:id
-// @access  Admin
+
 const deleteOrder = async (req, res) => {
   try {
     const order = await Order.findByIdAndDelete(req.params.id);

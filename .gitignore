@@ -2,7 +2,6 @@
 node_modules/
 **/node_modules/
 
-# Environment Variables & Secrets (Keep private!)
 .env
 *.env
 **/.env
@@ -28,4 +27,6 @@ yarn-error.log*
 
 # OS Files
 .DS_Store
+Thumbs.db
+
 Thumbs.db

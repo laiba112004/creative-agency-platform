@@ -169,13 +169,19 @@ const InvoiceModal = ({ isOpen, onClose, order }) => {
                     <p className="text-[11px] text-gray-400 print:text-gray-600 mt-0.5">
                       Includes 2 revision rounds, 4K render, and thumbnail master.
                     </p>
-                    {order.addons && order.addons.length > 0 && (
+                    {order.addons && (
                       <div className="mt-1 flex flex-wrap gap-1">
-                        {order.addons.map((ad, idx) => (
-                          <span key={idx} className="text-[10px] bg-gray-800 print:bg-gray-100 text-gray-300 print:text-gray-700 px-2 py-0.5 rounded">
-                            + {ad}
+                        {Array.isArray(order.addons) ? (
+                          order.addons.map((ad, idx) => (
+                            <span key={idx} className="text-[10px] bg-gray-800 print:bg-gray-100 text-gray-300 print:text-gray-700 px-2 py-0.5 rounded">
+                              + {ad}
+                            </span>
+                          ))
+                        ) : typeof order.addons === 'string' && order.addons.trim() ? (
+                          <span className="text-[10px] bg-gray-800 print:bg-gray-100 text-gray-300 print:text-gray-700 px-2 py-0.5 rounded">
+                            + {order.addons}
                           </span>
-                        ))}
+                        ) : null}
                       </div>
                     )}
                   </td>
