@@ -1,8 +1,5 @@
 const Order = require('../models/Order');
 
-// @desc    Create new order / project brief with add-ons & payment details
-// @route   POST /api/orders
-// @access  Public
 const createOrder = async (req, res) => {
   try {
     const {
