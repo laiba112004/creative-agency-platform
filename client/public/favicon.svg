@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" fill="none">
+  <!-- Deep Navy Luxury Base -->
+  <rect width="64" height="64" rx="16" fill="#0B1220" />
+  <rect x="2" y="2" width="60" height="60" rx="14" stroke="#C9A24B" stroke-width="1.5" stroke-opacity="0.3" />
+
+  <!-- Bold Kinetic Play & Spark Symbol (Distinct for Tab Readability) -->
+  <path d="M22 17C22 15.4 23.8 14.4 25.1 15.3L46.8 30.3C47.9 31.1 47.9 32.9 46.8 33.7L25.1 48.7C23.8 49.6 22 48.6 22 47V17Z" fill="url(#favGold)" />
+  
+  <!-- Inset Geometric Light Ray -->
+  <path d="M22 17L38 32L22 47V17Z" fill="url(#favInnerRay)" />
+
+  <!-- Star Spark Accent on Tip -->
+  <circle cx="48" cy="18" r="3" fill="#FFF2C2" />
+  <circle cx="48" cy="18" r="5" stroke="#C9A24B" stroke-width="1" stroke-opacity="0.6" />
+
+  <defs>
+    <linearGradient id="favGold" x1="22" y1="15" x2="48" y2="49" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#FDF0CD" />
+      <stop offset="40%" stop-color="#E0B85C" />
+      <stop offset="85%" stop-color="#C9A24B" />
+      <stop offset="100%" stop-color="#8F6A1E" />
+    </linearGradient>
+    <linearGradient id="favInnerRay" x1="22" y1="17" x2="38" y2="32" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#FFFFFF" stop-opacity="0.65" />
+      <stop offset="100%" stop-color="#C9A24B" stop-opacity="0.1" />
+    </linearGradient>
+  </defs>
+</svg>
